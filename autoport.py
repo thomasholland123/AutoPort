@@ -117,4 +117,4 @@ if remove == "y":
     os.remove(filename)
     
 else:
-    return
+    break

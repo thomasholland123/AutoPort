@@ -6,6 +6,10 @@
 
 (LONG) (EW)
 
+## Saftey Notes and Piolate Notes:
+
+(SAFTEY)
+
 ## Advantages:
 
 (ADV)

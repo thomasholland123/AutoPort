@@ -7,6 +7,16 @@ import pdfkit
 print("Welcome to AutoPort.\n This will take the information about the port or harbour that you enter and make it into a PDF file for you to print")
 
 portname = str(input("Enter port name: "))
+
+safety = []
+
+while True:
+    tempsafety = str(input("Enter any important safety information about this port or its piolatage (press enter once done): "))
+    if  tempsafety == "":
+        break
+    else:
+        safety.append(tempsafety)
+        
 lat = str(input("Enter port lat: "))
 NS = str(input("Enter port lat N/S: "))
 long = str(input("Enter port long: "))
@@ -70,6 +80,8 @@ data11 = data10.replace("(HARBOURCHANNEL)", harbourchannel)
 data12 = data11.replace("(COST)", cost)
 otherstring = ',\n'.join(map(str, other))
 data13 = data12.replace("(OTHER)", otherstring)
+safetystring = ',\n'.join(map(str, safety))
+data14 = data13.replace("(SAFETY)", safetystring)
 
 
 
@@ -79,7 +91,7 @@ fileopen.close
 
 fileopen = open(filename, "wt")
 
-fileopen.write(data13)
+fileopen.write(data14)
 fileopen.close()
 
 print("Done and saved as .txt")

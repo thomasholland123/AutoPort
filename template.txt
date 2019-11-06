@@ -1,0 +1,29 @@
+# Port Notes: (Port Name)
+
+## Entrance Waypoint: 
+
+(LAT) (NS)
+
+(LONG) (EW)
+
+## Advantages:
+
+(ADV)
+
+## Disadvantages:
+
+(DISADV)
+
+## Accessibility:
+
+Able to moor/anchor in: (WINDACCSESS)
+
+Minumum charted depth: (DEPTHACCSESS) meters
+
+## Other notes:
+
+Harbour master channel: (HARBOURCHANNEL)
+
+Cost: (COST)
+
+(OTHER)

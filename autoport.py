@@ -4,6 +4,8 @@ from markdown import markdown
 import pdfkit
 
 
+print("Welcome to AutoPort.\n This will take the information about the port or harbour that you enter and make it into a PDF file for you to print")
+
 portname = str(input("Enter port name: "))
 lat = str(input("Enter port lat: "))
 NS = str(input("Enter port lat N/S: "))

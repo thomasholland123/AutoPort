@@ -1,0 +1,6 @@
+pdfkit
+markdown
+shutil
+wkhtmltopdf
+
+# Can be installed by installreq.sh

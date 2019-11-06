@@ -110,11 +110,13 @@ pdfkit.from_string(html_text, output_filename)
 
 print("Saved as PDF")
 
-
-remove = input("If you want the text file and markdown file to be removed (and only leave the PDF) please type \"y\" without the \"\": ")
-if remove == "y":
-    os.remove(filenamemd)
-    os.remove(filename)
+while True:
+    remove = input("If you want the text file and markdown file to be removed (and only leave the PDF) please type \"y\" without the \"\": ")
+    if remove == "y":
+        os.remove(filenamemd)
+        os.remove(filename)
     
-else:
-    break
+    else:
+        break
+    
+quit()

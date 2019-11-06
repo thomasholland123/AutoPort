@@ -1,4 +1,4 @@
-
+import os
 import shutil
 from markdown import markdown
 import pdfkit
@@ -23,7 +23,7 @@ long = str(input("Enter port long: "))
 EW = str(input("Enter port long E/W: "))
 adv = []
 while True:
-    tempadv = str(input("Enter port advantage (press enter once done): "))
+    tempadv = str(input("Enter port advantages (press enter once done): "))
     if  tempadv == "":
         break
     else:
@@ -32,14 +32,14 @@ while True:
 disadv = []
 
 while True:
-    tempdisadv = str(input("Enter port disadvantage (press enter once done): "))
+    tempdisadv = str(input("Enter port disadvantages (press enter once done): "))
     if  tempdisadv == "":
         break
     else:
         disadv.append(tempdisadv)
 
-windaccsess = str(input("Enter port wind requirments for accsess or for safe stay: "))
-depth = str(input("Enter port's minmum depth: "))
+windaccsess = str(input("When can the port/harbour be saftely moored/anchored in (i.e. when is it not exposed): "))
+depth = str(input("Enter port's minmum charted depth (in meters): "))
 
 harbourchannel = str(input("Enter any harbour channels: "))
 cost = str(input("Enter any cost to moor or anchor: "))
@@ -109,3 +109,12 @@ with open(filenamemd, 'r') as f:
 pdfkit.from_string(html_text, output_filename)
 
 print("Saved as PDF")
+
+
+remove = input("If you want the text file and markdown file to be removed (and only leave the PDF) please type \"y\" without the \"\": ")
+if remove == "y":
+    os.remove(filenamemd)
+    os.remove(filename)
+    
+else:
+    return
